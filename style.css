@@ -1,0 +1,252 @@
+:root {
+    --dark: #1D3640;
+    /* azul oscuro */
+    --teal: #04BFAD;
+    /* turquesa */
+    --yellow: #F2BB16;
+    /* amarillo */
+    --orange: #F29F05;
+    /* naranja */
+    --light: #F2F2F2;
+    /* gris claro */
+}
+
+/* ====== BASE ====== */
+body {
+    background-color: var(--light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e5e5e5;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: visible;/* deja que el logo sobresalga */
+}
+
+.navbar-brand .logo {
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+    margin-top: -25px;/* lo sube un poco */
+    margin-bottom: -25px;/* reduce el espacio extra */
+}
+
+.navbar .btn {
+    font-weight: 600;
+}
+
+.navbar a {
+    text-decoration: none !important;
+    /* sin subrayado */
+    border: none !important;
+    /* sin borde azul */
+    outline: none !important;
+    /* sin contorno */
+}
+
+
+
+/* Estilos para las imágenes de redes sociales */
+.social-img {
+    width: 32px !important;
+    height: 32px !important;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}
+
+.social-img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* ====== BOTONES ====== */
+.btn-success {
+    background-color: var(--teal) !important;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: var(--yellow)!important;/* Verde un poco más oscuro */
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-agregado {
+    background-color: var(--yellow) !important;
+    border-color: var(--yellow) !important;
+    color: #000 !important;
+    font-weight: bold;
+}
+
+.btn-warning {
+    background-color: var(--yellow) !important;
+    border: none;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--orange) !important;
+    border: none;
+}
+
+
+
+/* ====== CARDS ====== */
+/* Cards de libros */
+
+.card {
+    height: 100%;/* Ejemplo de altura fija. Puedes ajustarlo a tu gusto. */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    max-height: 350px;/* controla la altura máxima */
+    max-width: 70%;
+    width: auto;
+    height: auto;
+    margin: 0 auto;/* centrada */
+    display: block;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    padding: 5px;
+}
+
+/* Asegurar que el contenido de la card quede bien pegado hacia abajo */
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;/* centra el texto */
+    margin: 5px 20px;
+}
+
+.card-body h5 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.card-body p {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+
+/* ====== BANNER ====== */
+.banner {
+    width: 100%;
+    height: 800px;/* altura fija */
+    overflow: hidden;/* evita scroll raro */
+}
+
+
+.banner-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%; /* mueve el foco hacia abajo */
+    display: block;
+}
+
+/* Página de detalle de libro */
+main h1 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+main h3 {
+    color: var(--teal);
+    font-weight: 600;
+}
+
+/* ====== FOOTER ====== */
+.footer {
+    background-color: var(--dark);/* azul oscuro */
+    color: var(--light);
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* ==============================
+   MEDIA QUERIES RESPONSIVE
+   ============================== */
+
+/* Laptops / Escritorio normal */
+@media (max-width: 1199px) {
+    .banner {
+        height: 700px;
+        /* un poco más bajo */
+    }
+
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+    .banner {
+        height: 500px;
+    }
+
+    .container {
+        max-width: 720px;
+        padding: 0 15px;
+    }
+
+    .form-control,
+    .form-select {
+        width: 100% !important;
+        /* inputs apilados */
+    }
+
+    .d-flex {
+        flex-direction: column !important;
+        gap: 10px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 767px) {
+    .banner {
+        height: 350px;
+    }
+
+    header .navbar-brand img {
+        max-width: 150px;
+    }
+
+    @media (max-width: 767px) {
+    #book-detail button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+    .footer {
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 479px) {
+    .banner {
+        height: 250px;
+    }
+
+    .banner img {
+        object-position: center;
+        /* centra aún más */
+    }
+
+    header .navbar-brand img {
+        max-width: 120px;
+    }
+}
