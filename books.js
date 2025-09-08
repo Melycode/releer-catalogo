@@ -880,12 +880,13 @@ const books = [
   },
   {
     id:87,
-    title: "Los ejércitos de la noche",
-    author: "Norman Mailer",
-    category: "novela",
-    category_display: "¨Novelas",
-    price: 30.00,
-    image: "img/ejercitos_noche.jpg"
+    title: "¿Quién le teme a la oscuridad?",
+    author: "Fanny Joly",
+    editorial: "Panamericana",
+    category: "planlector",
+    category_display: "Plan lector",
+    price: 12.00,
+    image: "img/quien_le_teme_a_la_oscuridad.jpeg"
   },
   {
     id:88,
@@ -932,4 +933,5 @@ const books = [
     price: 20.00,
     image: "img/la_fiesta_de_la_insignificancia.jpg"
   }, 
+
 ];
